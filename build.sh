@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build --no-cache -t arkdocker .
+docker build --no-cache -t arkdockerx .

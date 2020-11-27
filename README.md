@@ -168,4 +168,8 @@ Currently none
   - added auto upgrading of arkmanager
 + 1.5 :
   - fixed arkmanager upgrade
++ 1.6 :
+  - fixed issues with arkmanager upgrade-tools
+  - switched github repository url of arkmanager
+  - added RCON port to configuration
 
