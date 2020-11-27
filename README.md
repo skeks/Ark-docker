@@ -105,6 +105,7 @@ To add mods, you only need to change the variable ark_GameModIds in *arkmanager.
 + __ADMINPASSWORD__ : Admin password of your ark server (default : "adminpassword")
 + __SERVERPORT__ : Ark server port (can't rebind with docker, it doesn't work) (default : 27015)
 + __STEAMPORT__ : Steam server port (can't rebind with docker, it doesn't work) (default : 7778)
++ __RCONPORT__ : RCON server port (can't rebind with docker, it doesn't work) (default : 32330)
 + __MAX_PLAYERS__ : Number of maximum players (default : 70)
 + __BACKUPONSTART__ : Backup the server when the container is started. 0: no backup (default : 1)
 + __UPDATEPONSTART__ : Update the server when the container is started. 0: no update (default : 1)
@@ -131,7 +132,7 @@ To add mods, you only need to change the variable ark_GameModIds in *arkmanager.
 ## Expose
 + Port : __STEAMPORT__ : Steam port (default: 7778)
 + Port : __SERVERPORT__ : server port (default: 27015)
-+ Port : __32330__ : rcon port
++ Port : __RCONPORT__ : rcon port (default: 32330)
 
 ## Known issues
 Currently none
