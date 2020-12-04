@@ -57,6 +57,16 @@ fi
 echo "Loading crontab..."
 cat /ark/crontab | crontab -
 
+# Copy env variables to arkmanager.cfg file. Prevents loss of config during automated updates
+sed -i "s/ark_SessionName=.*/ark_SessionName=\"${SESSIONNAME}\"/g" /ark/arkmanager.cfg
+sed -i "s/serverMap=.*/serverMap=${SERVERMAP}/g" /ark/arkmanager.cfg
+sed -i "s/ark_ServerPassword=.*/ark_ServerPassword=${SERVERPASSWORD}/g" /ark/arkmanager.cfg
+sed -i "s/ark_ServerAdminPassword=.*/ark_ServerAdminPassword=${ADMINPASSWORD}/g" /ark/arkmanager.cfg
+sed -i "s/ark_MaxPlayers=.*/ark_MaxPlayers=${MAX_PLAYERS}/g" /ark/arkmanager.cfg
+sed -i "s/ark_QueryPort=.*/ark_QueryPort=${SERVERPORT}/g" /ark/arkmanager.cfg
+sed -i "s/ark_Port=.*/ark_Port=${STEAMPORT}/g" /ark/arkmanager.cfg
+sed -i "s/ark_RCONPort=.*/ark_RCONPort=${RCONPORT}/g" /ark/arkmanager.cfg
+
 # Launching ark server
 if [ $UPDATEONSTART -eq 0 ]; then
 	arkmanager start -noautoupdate

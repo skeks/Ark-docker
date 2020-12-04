@@ -1,5 +1,6 @@
 FROM centos:7
 MAINTAINER skeks
+ADD VERSION .
 
 # Var for first config
 ENV SESSIONNAME="Arksaar" \
