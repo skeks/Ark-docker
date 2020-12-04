@@ -1,5 +1,6 @@
 SHELL=/bin/bash
 # Example of job definition:
+# crontab -u steam /ark/crontab
 # .---------------- minute (0 - 59) 
 # |  .------------- hour (0 - 23) 
 # |  |  .---------- day of month (1 - 31) 
